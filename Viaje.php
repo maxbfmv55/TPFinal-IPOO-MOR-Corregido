@@ -164,13 +164,13 @@ class Viaje{
                     $responsable->Buscar($numEmpleado);
                     $this->setObjResponsable($responsable); */
                    
-                    $objEmpresa = new Empresa();
-                    $objEmpresa->Buscar($row2['idempresa']);
+                    $empresa = new Empresa();
+                    $empresa->Buscar($row2['idempresa']);
                     
-                    $objResponsable = new ResponsableV();
-                    $objResponsable->Buscar($row2['rnumeroempleado']);
+                    $responsable = new ResponsableV();
+                    $responsable->Buscar($row2['rnumeroempleado']);
         
-                    $this->cargar($row2['idviaje'],$row2['vdestino'], $row2['vcantmaxpasajeros'], $objEmpresa, $objResponsable, $row2['vimporte']);
+                    $this->cargar($row2['idviaje'],$row2['vdestino'], $row2['vcantmaxpasajeros'], $empresa, $responsable, $row2['vimporte']);
                     $resp= true;
 				}				
 		 	}	else {
